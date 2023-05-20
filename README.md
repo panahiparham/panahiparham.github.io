@@ -1,1 +1,0 @@
-# panahiparham.github.io
