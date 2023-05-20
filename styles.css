@@ -1,0 +1,64 @@
+body {
+    font-family: "Times New Roman", serif;
+    margin: 0;
+    padding: 20px;
+}
+
+h1 {
+    font-size: 32px;
+    margin-bottom: 5px; /* Updated margin-bottom value */
+}
+
+h2 {
+    font-size: 24px;
+    margin-bottom: 5px; /* Updated margin-bottom value */
+    position: relative;
+}
+
+h2::after {
+    content: "";
+    position: absolute;
+    bottom: -3px;
+    left: 0;
+    width: 100%;
+    height: 1px;
+    background-color: #ccc;
+}
+
+p {
+    font-size: 18px;
+    line-height: 1.6;
+    margin-bottom: 5px; /* Updated margin-bottom value */
+}
+
+a {
+    color: #337ab7;
+    text-decoration: none;
+}
+
+.container {
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start; /* Align items to the top */
+}
+
+.details {
+    flex: 1;
+}
+
+.image {
+    align-self: flex-start; /* Align the image to the top */
+    margin-left: 30px;
+}
+
+@media only screen and (max-width: 600px) {
+    .container {
+        flex-direction: column;
+    }
+    
+    .image {
+        align-self: flex-start;
+        margin-left: 0;
+        margin-top: 20px;
+    }
+}
