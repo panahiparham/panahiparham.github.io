@@ -32,16 +32,13 @@
             
             <div class="research-section">
                 <h2>Research</h2>
-                <em>Under Construction!!!</em>
-                <p>Keywords: Reinforcement Learning</p>
-                <p>
-                    <p>I work on <b>Reinforcement Learning</b>, a machine learning paradigm for sequential decision making and control. My current research focus is twofold:</p>
-                    <ol>
-                        <li>Creating RL algorithms that plan using Temporally Abstract Models of the world.</li>
-                        <li>Investigating and improving methods for training Deep RL agents.</li>
-                    </ol>
-                </p>
-                <!-- <p>Integer semper urna et nisi tristique, nec vulputate metus lobortis. Morbi lacinia felis non metus aliquam viverra. Nam luctus, purus eu vulputate consectetur, arcu urna hendrerit felis, ut fringilla neque lectus a mi. Donec viverra pretium suscipit. Aliquam tincidunt sem eu pellentesque fermentum. Fusce consequat dui et odio vulputate, ut fringilla velit hendrerit. Curabitur consequat, odio in scelerisque cursus, erat diam hendrerit ligula, ac tristique dui velit id purus. Mauris egestas nunc at ex ullamcorper posuere. Nunc tempor ultrices nulla, eget luctus orci. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia curae; Morbi lacinia risus nisl, sit amet sagittis metus pellentesque sit amet.</p> -->
+                <!-- <em>Under Construction!!!</em>
+                <p>Keywords: Reinforcement Learning</p> -->
+                <p>I am interested in creating intelligent agents that organize and (re-)use their experience to learn about and make better decisions in the world.</p>
+
+                <p>One approach to the organization of experience is Model-Based Reinforcement Learning, where the agent creates a model of its environment and imagines possible interactions with it to plan its future. However, regular one-step prediction models are limited in long-horizon planning due to the propagation of errors in multi-step prediction. One way to attack this issue is by incorporating models that consider macro actions, also known as options. Another benefit of these <b>Temporally Abstract Models</b> is the improved performance achieved by <b>speeding up information propagation</b> in the state space.</p>
+                
+                <p>Most supervised learning systems today train Neural Networks with mini-batches of i.i.d. data. These constraints are against the ideas of sequentiality and incremental updates at the heart of Reinforcement Learning. <b>Experience Replay (ER)</b> reconciles NNs with RL by storing recent interactions of the agent in a buffer and samples mini-batches of data from it to train the agent. ER is a critical part of any Deep RL agent, but it is still not fully understood.</p>
             </div>
             
             <div class="cv-section">
