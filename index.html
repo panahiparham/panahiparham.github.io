@@ -32,13 +32,14 @@
             
             <div class="research-section">
                 <h2>Research</h2>
-                <!-- <em>Under Construction!!!</em>
-                <p>Keywords: Reinforcement Learning</p> -->
-                <p>I am interested in creating intelligent agents that organize and (re-)use their experience to learn about and make better decisions in the world.</p>
 
-                <p>One approach to the organization of experience is Model-Based Reinforcement Learning, where the agent creates a model of its environment and imagines possible interactions with it to plan its future. However, regular one-step prediction models are limited in long-horizon planning due to the propagation of errors in multi-step prediction. One way to attack this issue is by incorporating models that consider macro actions, also known as options. Another benefit of these <b>Temporally Abstract Models</b> is the improved performance achieved by <b>speeding up information propagation</b> in the state space.</p>
+                <p>I aim to create goal-driven agents that learn in a continually changing environment. To achieve this, agents must use their experience effectively. In the context of <b>Deep Reinforcement Learning</b>, there are broadly two ways to incorporate past data into the learning process: Model learning and experience replay.</p>
+
+                <p>Agents can use past data to construct a model of the world and use it to predict the future, make decisions, and learn from simulated experiences. I worked on a novel approach to construct and use models, <b>Goal Space Planning</b>, which incorporates subtasks and option models to reason about long-horizon events and speed up learning.</p>
                 
-                <p>Most supervised learning systems today train Neural Networks with mini-batches of i.i.d. data. These constraints are against the ideas of sequentiality and incremental updates at the heart of Reinforcement Learning. <b>Experience Replay (ER)</b> reconciles NNs with RL by storing recent interactions of the agent in a buffer and samples mini-batches of data from it to train the agent. ER is a critical part of any Deep RL agent, but it is still not fully understood.</p>
+                <p>An alternative to model learning is a mechanism for storing and reusing experience for direct learning called Experience Replay. Replaying past experiences has become ubiquitous in reinforcement learning with numerous modifications to the originally proposed method. My research aims to improve the understanding of different <b>replay styles</b> in decision-making agents.</p>
+
+                <p>A successful learning agent will continue to learn and explore in a changing world. Most learning systems today lose their ability to learn over time due to a collection of phenomena collectively known as loss of plasticity. I have contributed to the study of loss of plasticity by introducing new <b>environments and evaluation frameworks</b> to lay the groundwork to develop continual learning agents.</p>
             </div>
             
             <div class="cv-section">
