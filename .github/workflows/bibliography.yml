@@ -16,5 +16,6 @@ jobs:
           git config --global user.email "panahiparham@gmail.com"
           git config --global user.name "Parham Mohammad Panahi"
           python src/create_bibliography.py
-          git commit -am "ci: updated bibliography"
+          git add docs/publications.bib
+          git commit -m "ci: updated bibliography"
           git push origin main
