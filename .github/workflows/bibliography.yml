@@ -13,10 +13,10 @@ jobs:
       - uses: actions/setup-python@v4
 
       - run: |
+          git config --global user.email "panahiparham@gmail.com"
+          git config --global user.name "Parham Mohammad Panahi"
+          rm -rf docs/publications.bib
           python src/create_bibliography.py
-          git config user.email "panahiparham@gmail.com"
-          git config user.name "Parham Mohammad Panahi"
           git add docs/publications.bib
           git commit -m "ci: updated bibliography"
           git push origin main
-
