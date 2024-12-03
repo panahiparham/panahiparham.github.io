@@ -14,7 +14,7 @@ jobs:
 
       - run: |
           python src/create_bibliography.py
-          git add docs/bibliography.bib
-          git commit -m "Update bibliography"
+          git add docs/publications.bib
+          git commit -m "ci: updated bibliography"
           git push origin main
 
