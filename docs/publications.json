@@ -1,0 +1,50 @@
+{
+  "publications": [
+    {
+      "type": "inproceedings",
+      "citekey": "panahi2024investigating",
+      "title": "Investigating the Interplay of Prioritized Replay and Generalization",
+      "author": ["Parham Mohammad Panahi", "Andrew Patterson", "Martha White", "Adam White"],
+      "booktitle": "Reinforcement Learning Conference (RLC)",
+      "year": "2024",
+      "url": "https://rlj.cs.umass.edu/2024/papers/Paper265.html"
+    },
+    {
+      "type": "article",
+      "citekey": "lo2024goal",
+      "title": "Goal-Space Planning with Subgoal Models",
+      "author": ["Chunlok Lo", "Kevin Roice", "Parham Mohammad Panahi", "Scott M. Jordan", "Adam White", "Gabor Mihucz", "Farzane Aminmansour", "Martha White"],
+      "journal": "Journal of Machine Learning Research",
+      "year": "2024",
+      "volume": "25",
+      "number": "330",
+      "pages": "1--57",
+      "url": "http://jmlr.org/papers/v25/24-0040.html"
+    },
+    {
+      "type": "misc",
+      "citekey": "mesbahi2024kpercent",
+      "title": "K-percent Evaluation for Lifelong RL",
+      "author": ["Golnaz Mesbahi", "Parham Mohammad Panahi", "Olya Mastikhina", "Martha White", "Adam White"],
+      "year": "2024",
+      "url": "https://arxiv.org/abs/2404.02113"
+    },
+    {
+      "type": "misc",
+      "citekey": "roice2024new",
+      "title": "A New View on Planning in Online Reinforcement Learning",
+      "author": ["Kevin Roice", "Parham Mohammad Panahi", "Scott M. Jordan", "Adam White", "Martha White"],
+      "year": "2024",
+      "url": "https://arxiv.org/abs/2406.01562"
+    },
+    {
+      "type": "thesis",
+      "citekey": "panahi2024msc",
+      "title": "Investigating the Interplay of Prioritized Replay and Generalization",
+      "author": "Parham Mohammad Panahi",
+      "school": "University of Alberta",
+      "year": "2024",
+      "url": "https://doi.org/10.7939/r3-hj51-3v03"
+    }
+  ]
+}
