@@ -13,7 +13,7 @@ pubs = data['publications']
 
 
 
-article = lambda citekey, title, author, journal, volume, number, pages, year: f'''@article{{{citekey},
+article = lambda citekey, title, author, journal, volume, number, pages, year, url: f'''@article{{{citekey},
   title = {{{title}}},
   author = {{{" and ".join(author)}}},
   journal = {{{journal}}},
@@ -21,6 +21,7 @@ article = lambda citekey, title, author, journal, volume, number, pages, year: f
   number = {{{number}}},
   pages = {{{pages}}},
   year = {{{year}}},
+  url = {{{url}}},
 }}
 
 '''
