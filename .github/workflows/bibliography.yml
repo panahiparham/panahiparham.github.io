@@ -1,0 +1,22 @@
+name: Bibliography
+
+on:
+  push:
+    branches: [ main ]
+
+jobs:
+  check:
+    runs-on: ubuntu-latest
+    steps:
+      # setup the repository
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v4
+        with:
+          cache: 'pip'y
+
+      - run: |
+          python src/create_bibliography.py
+          git add docs/bibliography.bib
+          git commit -m "Update bibliography"
+          git push origin main
+
