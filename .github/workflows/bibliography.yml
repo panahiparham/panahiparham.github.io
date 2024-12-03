@@ -11,8 +11,6 @@ jobs:
       # setup the repository
       - uses: actions/checkout@v4
       - uses: actions/setup-python@v4
-        with:
-          cache: 'pip'y
 
       - run: |
           python src/create_bibliography.py
