@@ -1,6 +1,15 @@
 {
   "publications": [
     {
+      "type": "inproceedings",
+      "citekey": "panahi2024investigating",
+      "title": "Investigating the Interplay of Prioritized Replay and Generalization",
+      "author": ["Parham Mohammad Panahi", "Andrew Patterson", "Martha White", "Adam White"],
+      "booktitle": "Reinforcement Learning Conference (RLC)",
+      "year": "2024",
+      "url": "https://rlj.cs.umass.edu/2024/papers/Paper265.html"
+    },
+    {
       "type": "article",
       "citekey": "lo2024goal",
       "title": "Goal-Space Planning with Subgoal Models",
