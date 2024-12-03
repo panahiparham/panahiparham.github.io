@@ -17,6 +17,6 @@ jobs:
           git config --global user.name "Parham Mohammad Panahi"
           rm -rf docs/publications.bib
           python src/create_bibliography.py
-          git add docs/publications.bib
+          git add -f docs/publications.bib
           git commit -m "ci: updated bibliography"
           git push origin main
