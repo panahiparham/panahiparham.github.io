@@ -59,7 +59,7 @@ thesis = lambda citekey, title, author, school, year, url: f'''@thesis{{{citekey
 
 for pub in pubs:
     if pub['type'] == 'article':
-        output.write(article(pub['citekey'], pub['title'], pub['author'], pub['journal'], pub['volume'], pub['number'], pub['pages'], pub['year']))
+        output.write(article(pub['citekey'], pub['title'], pub['author'], pub['journal'], pub['volume'], pub['number'], pub['pages'], pub['year'], pub['url']))
     elif pub['type'] == 'inproceedings':
         output.write(inproceedings(pub['citekey'], pub['title'], pub['author'], pub['booktitle'], pub['year'], pub['url']))
     elif pub['type'] == 'misc':
