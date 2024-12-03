@@ -1,0 +1,22 @@
+name: Bibliography
+
+on:
+  push:
+    branches: [ main ]
+
+jobs:
+  check:
+    runs-on: ubuntu-latest
+    steps:
+      # setup the repository
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v4
+
+      - run: |
+          git config --global user.email "panahiparham@gmail.com"
+          git config --global user.name "Parham Mohammad Panahi"
+          rm -rf docs/publications.bib
+          python src/create_bibliography.py
+          git add -f docs/publications.bib
+          git commit -m "ci: updated bibliography"
+          git push origin main
