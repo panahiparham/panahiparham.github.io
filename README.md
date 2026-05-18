@@ -1,6 +1,6 @@
-Academic website, Parham Mohammad Panahi.
+# Academic website of Parham Mohammad Panahi
 
-# Acknowledgements
+### Acknowledgements
 
 - Template adapted from Jon Barron's public academic [website](https://jonbarron.info/)
 - Some of the icons come from [Academicons](https://jpswalsh.github.io/academicons/)
