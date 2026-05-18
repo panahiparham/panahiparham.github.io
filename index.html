@@ -10,6 +10,45 @@
     <link rel="shortcut icon" href="images/favicon/favicon.ico" type="image/x-icon">
     <link rel="stylesheet" type="text/css" href="stylesheet.css">
 
+    <!-- Font Awesome & Academicons for icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/academicons/1.9.4/academicons.min.css">
+
+    <!-- jQuery for toggle functionality -->
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+
+    <script>
+      $(document).ready(function() {
+        // Prevent clicks on disabled buttons
+        $('.btn-disabled').click(function(e) {
+          e.preventDefault();
+          return false;
+        });
+
+        // Toggle bibtex
+        $('.show-hide-bibentry').click(function(e) {
+          if ($(this).hasClass('btn-disabled')) {
+            e.preventDefault();
+            return;
+          }
+          e.preventDefault();
+          $(this).closest('.spd-bibentry-buttons').siblings('.spd-bibentry-bibtex').slideToggle();
+          $(this).toggleClass('active');
+        });
+
+        // Toggle abstract
+        $('.show-hide-abstract').click(function(e) {
+          if ($(this).hasClass('btn-disabled')) {
+            e.preventDefault();
+            return;
+          }
+          e.preventDefault();
+          $(this).closest('.spd-bibentry-buttons').siblings('.spd-bibentry-abstract').slideToggle();
+          $(this).toggleClass('active');
+        });
+      });
+    </script>
+
   </head>
 
   <body>
@@ -56,15 +95,13 @@
           <table style="width:100%;border:0px;border-spacing:0px;border-collapse:separate;margin-right:auto;margin-left:auto;"><tbody>
 
     <tr>
-      <td style="padding:8px;width:30%;vertical-align:middle">
+      <td style="padding:8px;width:30%;vertical-align:top">
         <div>
           <img src='images/panahi2026endpoint.png' width=100%>
         </div>
       </td>
-      <td style="padding:8px;width:70%;vertical-align:middle">
-        <a href="#">
-			<span class="papertitle">Endpoint Replay: Compressing the Recency Buffer in Deep Reinforcement Learning</span>
-        </a>
+      <td style="padding:8px;width:70%;vertical-align:top">
+        <span class="papertitle">Endpoint Replay: Compressing the Recency Buffer in Deep Reinforcement Learning</span>
         <br>
         <strong>Parham Mohammad Panahi</strong>,
         Armin Ashrafi,
@@ -75,6 +112,20 @@
 				<br>
         <em>Reinforcement Learning Journal (RLJ)</em>, 2026
         <br>
+        <div class="spd-bibentry-buttons">
+          <a href="#" class="btn btn-default btn-disabled" title="Paper" role="button"><img src="images/svg/pdf.svg" alt="Paper" class="btn-icon"></a>
+          <a href="https://scholar.google.ca/scholar?q=Endpoint+Replay+Panahi+2026" class="btn btn-default btn-disabled" title="Google Scholar" role="button"><img src="images/svg/google-scholar.svg" alt="Google Scholar" class="btn-icon"></a>
+          <a class="fa fa-book show-hide-bibentry btn btn-default" title="BibTeX" role="button"></a>
+          <a class="show-hide-abstract btn btn-default" title="Abstract" role="button"><img src="images/svg/academia.svg" alt="Abstract" class="btn-icon"></a>
+          <a href="#" class="fa-solid fa-code btn btn-default btn-disabled" title="Code" role="button"></a>
+        </div>
+        <div class="spd-bibentry-bibtex">@article{panahi2026endpoint,
+    title = {Endpoint Replay: Compressing the Recency Buffer in Deep Reinforcement Learning},
+    author = {Parham Mohammad Panahi and Armin Ashrafi and Haoyu Du and Andrew Patterson and Martha White and Adam White},
+    journal = {Reinforcement Learning Journal (RLJ)},
+    year = {2026}
+}</div>
+        <div class="spd-bibentry-abstract">Experience replay remains one of the most practical and useful algorithmic tools in the deep reinforcement learning (DRL) toolbox. Aside from the limited success of prioritized replay and specialized approaches for large asynchronous systems, most DRL algorithms make use of a large, uniformly sampled recency buffer&mdash;even the size, one million, remains unchanged. Could we store less data, reduce redundancy, or more effectively chain experience together to speed up value propagation and still retain the performance of large buffers? In this paper, we investigate a simple compression approach that stores representative transitions derived from the end-points of a chain of connected n-step trajectory sequences. By curating these end-points in a much smaller recency buffer, our method maintains an effective memory horizon comparable to a standard large buffer while requiring an order of magnitude less storage. Through empirical evaluation, we demonstrate that this approach prevents the systematic bias inherent in naive compression strategies and matches the performance of traditional large buffers in the Pinball environment and the Atari 2600 benchmark.</div>
         <p>
         A replay buffer compression approach that stores representative transitions derived from the endpoints of n-step trajectory sequences.
         </p>
@@ -82,12 +133,12 @@
     </tr>
 
     <tr>
-      <td style="padding:8px;width:30%;vertical-align:middle">
+      <td style="padding:8px;width:30%;vertical-align:top">
         <div>
           <img src='images/tang2026forager.png' style="width:80%;max-width:100%;display:block;margin:auto;">
         </div>
       </td>
-      <td style="padding:8px;width:70%;vertical-align:middle">
+      <td style="padding:8px;width:70%;vertical-align:top">
         <a href="https://arxiv.org/abs/2605.01131">
 			<span class="papertitle">Forager: a lightweight testbed for continual learning with partial observability in RL</span>
         </a>
@@ -105,6 +156,19 @@
 				<br>
         <em>Reinforcement Learning Journal (RLJ)</em>, 2026
         <br>
+        <div class="spd-bibentry-buttons">
+          <a href="https://arxiv.org/pdf/2605.01131" class="btn btn-default" title="Paper" role="button"><img src="images/svg/pdf.svg" alt="Paper" class="btn-icon"></a>
+          <a href="https://scholar.google.ca/citations?view_op=view_citation&hl=en&user=LCRB4rcAAAAJ&citation_for_view=LCRB4rcAAAAJ:8k81kl-MbHgC" class="btn btn-default" title="Google Scholar" role="button"><img src="images/svg/google-scholar.svg" alt="Google Scholar" class="btn-icon"></a>
+          <a class="fa fa-book show-hide-bibentry btn btn-default" title="BibTeX" role="button"></a>
+          <a class="show-hide-abstract btn btn-default" title="Abstract" role="button"><img src="images/svg/academia.svg" alt="Abstract" class="btn-icon"></a>
+        </div>
+        <div class="spd-bibentry-bibtex">@article{tang2026forager,
+    title = {Forager: A Configurable Continual RL Testbed with Partial Observability},
+    author = {Steven Tang and Xinze Xiong and Anna Hakhverdyan and Andrew Patterson and Jacob Adkins and Jiamin He and Esraa Elelimy and Parham Mohammad Panahi and Martha White and Adam White},
+    journal = {Reinforcement Learning Journal (RLJ)},
+    year = {2026}
+}</div>
+        <div class="spd-bibentry-abstract">In continual reinforcement learning (CRL), good performance requires never-ending learning, acting, and exploration in a big, partially observable world. Most CRL experiments have focused on loss of plasticity&mdash;the inability to keep learning&mdash;in one-off experiments where some unobservable non-stationarity is added to classic fully observable MDPs. Further, these experiments rarely consider the role of partial observability and the importance of CRL agents that use memory or recurrence. One potential reason for this focus on mitigating loss of plasticity without considering partial observability is that many partially-observable CRL environments are prohibitively expensive. In this paper, we introduce Forager, a lightweight partially-observable CRL environment with a constant memory footprint. We provide a set of experiments and sample tasks demonstrating that Forager is challenging for current CRL agents and yet also allows for in-depth study of those agents. We demonstrate that agents exhibit loss of plasticity, proposed mitigations can help, but that most useful is to leverage state construction. We conclude with a variant of Forager that generates an unending  stream of new tasks to learn that clearly highlights the limitations of current CRL agents.</div>
         <p>
         A configurable continual RL testbed with partial observability that runs fast with constant memory footprint.
         </p>
@@ -112,12 +176,12 @@
     </tr>
 
     <tr>
-      <td style="padding:8px;width:30%;vertical-align:middle">
+      <td style="padding:8px;width:30%;vertical-align:top">
         <div>
           <img src='images/mesbahi2025position.png' width=100%>
         </div>
       </td>
-      <td style="padding:8px;width:70%;vertical-align:middle">
+      <td style="padding:8px;width:70%;vertical-align:top">
         <a href="https://openreview.net/forum?id=JMoWFkwnvv">
 			<span class="papertitle">Position: Lifetime tuning is incompatible with continual reinforcement learning</span>
         </a>
@@ -131,6 +195,19 @@
 				<br>
         <em>Forty-second International Conference on Machine Learning (ICML)</em>, 2025
         <br>
+        <div class="spd-bibentry-buttons">
+          <a href="https://openreview.net/pdf?id=JMoWFkwnvv" class="btn btn-default" title="Paper" role="button"><img src="images/svg/pdf.svg" alt="Paper" class="btn-icon"></a>
+          <a href="https://scholar.google.ca/citations?view_op=view_citation&hl=en&user=LCRB4rcAAAAJ&citation_for_view=LCRB4rcAAAAJ:Se3iqnhoufwC" class="btn btn-default" title="Google Scholar" role="button"><img src="images/svg/google-scholar.svg" alt="Google Scholar" class="btn-icon"></a>
+          <a class="fa fa-book show-hide-bibentry btn btn-default" title="BibTeX" role="button"></a>
+          <a class="show-hide-abstract btn btn-default" title="Abstract" role="button"><img src="images/svg/academia.svg" alt="Abstract" class="btn-icon"></a>
+        </div>
+        <div class="spd-bibentry-bibtex">@inproceedings{mesbahi2025lifetime,
+    title = {Position: Lifetime tuning is incompatible with continual reinforcement learning},
+    author = {Golnaz Mesbahi and Parham Mohammad Panahi and Olya Mastikhina and Steven Tang and Martha White and Adam White},
+    booktitle = {International Conference on Machine Learning (ICML)},
+    year = {2025}
+}</div>
+        <div class="spd-bibentry-abstract">In continual reinforcement learning (RL) we want agents capable of never-ending learning, and yet our evaluation methodologies do not reflect this. The standard practice in RL is to assume unfettered access to the deployment environment for the full lifetime of the agent. For example, agent designers select the best performing hyperparameters in Atari by testing each for 200 million frames and then reporting results on 200 million frames. In this position paper, we argue and demonstrate the pitfalls of this inappropriate empirical methodology: <em>lifetime tuning</em>. We provide empirical evidence to support our position by testing DQN and SAC across several continuing and non-stationary environments with two main findings: (1) lifetime tuning does not allow us to identify algorithms that work well for continual learning&mdash;all algorithms equally succeed; (2) recently developed continual RL algorithms outperform standard non-continual algorithms when tuning is limited to a fraction of the agent's lifetime. The goal of this paper is to provide an explanation for why recent progress in continual RL has been mixed and motivate the development of empirical practices that better match the goals of continual RL.</div>
         <p>
         We argue and demonstrate the pitfalls of lifetime tuning in continual reinforcement learning, explain why recent progress in continual RL has been mixed, and motivate the development of empirical practices that better match the goals of continual RL.
         </p>
@@ -138,12 +215,12 @@
     </tr>
 
     <tr>
-      <td style="padding:8px;width:30%;vertical-align:middle">
+      <td style="padding:8px;width:30%;vertical-align:top">
         <div>
           <img src='images/panahi2024investigating.svg' width=100%>
         </div>
       </td>
-      <td style="padding:8px;width:70%;vertical-align:middle">
+      <td style="padding:8px;width:70%;vertical-align:top">
         <a href="https://rlj.cs.umass.edu/2024/papers/Paper265.html">
 			<span class="papertitle">Investigating the Interplay of Prioritized Replay and Generalization</span>
         </a>
@@ -155,6 +232,19 @@
 				<br>
         <em>Reinforcement Learning Journal (RLJ)</em>, 2024
         <br>
+        <div class="spd-bibentry-buttons">
+          <a href="https://rlj.cs.umass.edu/2024/papers/RLJ_RLC_2024_265.pdf" class="btn btn-default" title="Paper" role="button"><img src="images/svg/pdf.svg" alt="Paper" class="btn-icon"></a>
+          <a href="https://scholar.google.ca/citations?view_op=view_citation&hl=en&user=LCRB4rcAAAAJ&citation_for_view=LCRB4rcAAAAJ:LkGwnXOMwfcC" class="btn btn-default" title="Google Scholar" role="button"><img src="images/svg/google-scholar.svg" alt="Google Scholar" class="btn-icon"></a>
+          <a class="fa fa-book show-hide-bibentry btn btn-default" title="BibTeX" role="button"></a>
+          <a class="show-hide-abstract btn btn-default" title="Abstract" role="button"><img src="images/svg/academia.svg" alt="Abstract" class="btn-icon"></a>
+        </div>
+        <div class="spd-bibentry-bibtex">@article{panahi2024investigating,
+    title = {Investigating the Interplay of Prioritized Replay and Generalization},
+    author = {Parham Mohammad Panahi and Andrew Patterson and Martha White and Adam White},
+    journal = {Reinforcement Learning Journal (RLJ)},
+    year = {2024}
+}</div>
+        <div class="spd-bibentry-abstract">Experience replay, the reuse of past data to improve sample efficiency, is ubiquitous in reinforcement learning. Though a variety of smart sampling schemes have been introduced to improve performance, uniform sampling by far remains the most common approach. One exception is Prioritized Experience Replay (PER), where sampling is done proportionally to TD errors, inspired by the success of prioritized sweeping in dynamic programming. The original work on PER showed improvements in Atari, but follow-up results were mixed. In this paper, we investigate several variations on PER, to attempt to understand where and when PER may be useful. Our findings in prediction tasks reveal that while PER can improve value propagation in tabular settings, behavior is significantly different when combined with neural networks. Certain mitigations&mdash;like delaying target network updates to control generalization and using estimates of expected TD errors in PER to avoid chasing stochasticity&mdash;can avoid large spikes in error with PER and neural networks but generally do not outperform uniform replay. In control tasks, none of the prioritized variants consistently outperform uniform replay. We present new insight into the interaction between prioritization, bootstrapping, and neural networks and propose several improvements for PER in tabular settings and noisy domains.</div>
         <p>
         We present insight into the interaction between prioritization, bootstrapping, and neural networks and propose several improvements for prioritized replay in tabular settings and noisy domains.
         </p>
@@ -162,12 +252,12 @@
     </tr>
 
     <tr>
-      <td style="padding:8px;width:30%;vertical-align:middle">
+      <td style="padding:8px;width:30%;vertical-align:top">
         <div>
           <img src='images/lo2024goal.png' width=100%>
         </div>
       </td>
-      <td style="padding:8px;width:70%;vertical-align:middle">
+      <td style="padding:8px;width:70%;vertical-align:top">
         <a href="https://www.jmlr.org/papers/v25/24-0040.html">
 			<span class="papertitle">Goal-Space Planning with Subgoal Models</span>
         </a>
@@ -183,8 +273,24 @@
 				<br>
         <em>Journal of Machine Learning Research (JMLR)</em>, 2024
         <br>
+        <div class="spd-bibentry-buttons">
+          <a href="https://www.jmlr.org/papers/volume25/24-0040/24-0040.pdf" class="btn btn-default" title="Paper" role="button"><img src="images/svg/pdf.svg" alt="Paper" class="btn-icon"></a>
+          <a href="https://scholar.google.ca/citations?view_op=view_citation&hl=en&user=LCRB4rcAAAAJ&citation_for_view=LCRB4rcAAAAJ:WF5omc3nYNoC" class="btn btn-default" title="Google Scholar" role="button"><img src="images/svg/google-scholar.svg" alt="Google Scholar" class="btn-icon"></a>
+          <a class="fa fa-book show-hide-bibentry btn btn-default" title="BibTeX" role="button"></a>
+          <a class="show-hide-abstract btn btn-default" title="Abstract" role="button"><img src="images/svg/academia.svg" alt="Abstract" class="btn-icon"></a>
+        </div>
+        <div class="spd-bibentry-bibtex">@article{lo2024goal,
+    title = {Goal-Space Planning with Subgoal Models},
+    author = {Chunlok Lo and Kevin Roice and Parham Mohammad Panahi and Scott M. Jordan and Adam White and Gabor Mihucz and Farzane Aminmansour and Martha White},
+    journal = {Journal of Machine Learning Research (JMLR)},
+    volume = {25},
+    number = {330},
+    pages = {1--57},
+    year = {2024}
+}</div>
+        <div class="spd-bibentry-abstract">This paper investigates a new approach to model-based reinforcement learning using background planning: mixing (approximate) dynamic programming updates and model-free updates, similar to the Dyna architecture. Background planning with learned models is often worse than model-free alternatives, such as Double DQN, even though the former uses significantly more memory and computation. The fundamental problem is that learned models can be inaccurate and often generate invalid states, especially when iterated many steps. In this paper, we avoid this limitation by constraining background planning to a given set of (abstract) subgoals and learning only local, subgoal-conditioned models. This goal-space planning (GSP) approach is more computationally efficient, naturally incorporates temporal abstraction for faster long-horizon planning, and avoids learning the transition dynamics entirely. We show that our GSP algorithm can propagate value from an abstract space in a manner that helps a variety of base learners learn significantly faster in different domains.</div>
         <p>
-        We constrain background planning to a given set of (abstract) subgoals and learning only local, subgoal-conditioned models to avoid compounding model error. Also <a href="https://arxiv.org/abs/2406.01562">appeared</a> as an oral presentation at Planning and Reinforcement Learning Workshop at ICAPS 2024.</p>
+        We constrain background planning to a given set of (abstract) subgoals and learning only local, subgoal-conditioned models to avoid compounding model error. Also <a href="https://arxiv.org/abs/2406.01562">presented</a> at the Planning and Reinforcement Learning Workshop at ICAPS 2024.</p>
         </p>
         <em>* indicates equal contribution</em>
       </td>
