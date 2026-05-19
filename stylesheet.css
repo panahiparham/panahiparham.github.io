@@ -168,17 +168,6 @@ h2 {
   line-height: 1;
 }
 
-/* Code icon styling */
-.fa-solid.fa-code::before {
-  color: black;
-  transform: translateY(2px);
-  display: inline-block;
-}
-
-.btn:has(.fa-solid.fa-code):hover {
-  color: black;
-}
-
 /* SVG icons inside buttons */
 .btn-icon {
   width: 16px;
